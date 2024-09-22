@@ -46,6 +46,13 @@ body {
   height: 40px;
 }
 
+.umsoLogoText{
+  font-size: 28px;
+  font-weight: 800;
+  margin-left: -1.5rem;
+  align-items: center;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
