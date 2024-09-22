@@ -215,100 +215,93 @@ body {
   background-clip: text;
 }
 
-.inputSection{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
+.inputSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 .input-container {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 40%;
-    margin-top: 2rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 40%;
+  margin-top: 2rem;
 }
 
 .glowingInput {
-    width: 100%;
-    padding: 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #1e1e1e;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-    animation: rotateGlow 2s infinite linear;
+  width: 100%;
+  padding: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #1e1e1e;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  animation: rotateGlow 2s infinite linear;
 }
 
 .generateBtn {
-    position: absolute;
-    right: 0;
-    padding: 18px 25px;
-    margin-left: 2px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 0 8px 8px 0;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  right: 0;
+  padding: 18px 25px;
+  margin-left: 2px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-.heroSectionsubHeading{
-    color: #fff;
-    font-size: 26px;
-    font-weight: 400;
+.heroSectionsubHeading {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 .generateBtn:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
-
 .glowingInput:focus {
-    border: 2px solid cyan;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  border: 2px solid cyan;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }
 
 @keyframes rotateGlow {
-    0% {
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.3);
-       
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.7);
-       
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.3);
-      
-    }
-    
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.3);
+  }
 }
 
-.ratingSection{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.ratingSection {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-.ratingSection span{
-    color: #fff;
+.ratingSection span {
+  color: #fff;
 }
-.ratingStar img{
-    width: 20px;
-    height: 20px;
+.ratingStar img {
+  width: 20px;
+  height: 20px;
 }
-.ratingStar img:nth-child(5){
-    clip-path: inset(0 40% 0 0);
+.ratingStar img:nth-child(5) {
+  clip-path: inset(0 40% 0 0);
 }
-
-
 
 /* Responsive */
 @media (max-width: 768px) {
