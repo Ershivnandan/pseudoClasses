@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="menuLeft">
+        <div class="navbar__logo">
+          <div class="logoImg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 327 190"
+              fill="none"
+            >
+              <defs>
+                <linearGradient
+                  id="gradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                  gradientTransform="rotate(254)"
+                >
+                  <stop
+                    offset="30%"
+                    style="stop-color: rgba(255, 255, 255, 1); stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: rgba(0, 212, 255, 0); stop-opacity: 1"
+                  />
+                </linearGradient>
+
+                <linearGradient
+                  id="a"
+                  x1="279.36"
+                  x2="129.01"
+                  y1="507.91"
+                  y2="-2.3"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset=".39" stop-color="#0C0119"></stop>
+                  <stop
+                    offset=".95"
+                    stop-color="#0C0119"
+                    stop-opacity="0"
+                  ></stop>
+                </linearGradient>
+
+                <linearGradient
+                  id="b"
+                  x1="231.15"
+                  x2="85.48"
+                  y1="-48.14"
+                  y2="297.65"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset=".2" stop-color="#0C0119"></stop>
+                  <stop
+                    offset=".5"
+                    stop-color="#0C0119"
+                    stop-opacity=".6"
+                  ></stop>
+                  <stop offset="1" stop-color="#0C0119" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+
+              <path
+                fill=""
+                d="M228.03 151.75c-24.56 0-46.95-13.55-64.22-36.31C142.5 87.53 129.01 46.07 129.01 0H.3v4.88c0 1.62 0 3.25.27 4.88 1.35 34.41 10.8 66.12 26.17 93.21 29.14 51.76 79.6 86.18 137.06 86.18 57.47 0 107.92-34.15 137.06-86.18-18.07 30.08-43.98 48.78-72.84 48.78Z"
+              ></path>
+
+              <path
+                fill="#ffffff"
+                d="M307.35 0c11.33 0 19.96 9.76 18.88 21.14-2.42 20.6-8.63 52.57-25.09 81.83C272 155 221.55 189.15 164.08 189.15S56.16 155 27.02 102.97C45.1 132.78 71 151.48 99.87 151.48c24.55 0 46.94-13.55 64.48-36.31 17.54-22.76 29.68-55.01 33.46-91.32C198.89 10.84 211.03 0 224.5 0h82.84Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <ul class="navbar__links">
+          <li><a class="link" href="#">Sites</a></li>
+          <li><a class="link" href="#">Analytics</a></li>
+          <li><a class="link" href="#">Blogs</a></li>
+          <li><a class="link" href="#">Forms</a></li>
+          <li><a class="link" href="#">Files</a></li>
+        </ul>
+      </div>
+      <div class="menuRight">
+        <ul class="navbar__links" style="gap: 20px">
+          <li><a class="link" href="#">Discover</a></li>
+          <li><a class="link" href="#">Support</a></li>
+          <li>
+            <a class="link" href="#">
+              <img
+                src="https://e7.pngegg.com/pngimages/81/570/png-clipart-profile-logo-computer-icons-user-user-blue-heroes-thumbnail.png"
+                alt=""
+                class="navIcons"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar__menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobileClose">
+        <img
+          src="https://img.icons8.com/?size=100&id=8112&format=png&color=000000"
+          alt=""
+        />
+      </div>
+      <ul class="mobile-menu__links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="mainContainer">
+      <div class="heroSection">
+        <div class="mainTitle">
+          <h1>Get your</h1>
+          <h1>AI Generated Website</h1>
+          <h1>In Seconds</h1>
+        </div>
+        <div class="heroSectionsubHeading">
+          <p>Give it a try right below, without havingto sign up!</p>
+        </div>
+        <div class="inputSection">
+          <div class="input-container">
+            <input
+              class="glowingInput"
+              type="text"
+              placeholder="Type something..."
+            />
+            <button class="generateBtn">Generate</button>
+          </div>
+        </div>
+
+        <div class="ratingSection">
+          <span>Excellent</span>
+          <div class="ratingStar">
+            <img src="https://img.icons8.com/?size=100&id=7856&format=png&color=347928" alt="">
+            <img src="https://img.icons8.com/?size=100&id=7856&format=png&color=347928" alt="">
+            <img src="https://img.icons8.com/?size=100&id=7856&format=png&color=347928" alt="">
+            <img src="https://img.icons8.com/?size=100&id=7856&format=png&color=347928" alt="">
+            <img src="https://img.icons8.com/?size=100&id=7856&format=png&color=347928" alt="">
+          </div>
+          <span>4.8 out of 5 based upon reviews</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const closeButton = document.getElementsByClassName("mobileClose")[0];
+
+    closeButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("open");
+    });
+
+    menuToggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("open");
+    });
+  </script>
+</html>
