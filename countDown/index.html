@@ -32,24 +32,59 @@
         </button>
       </div>
 
-      <div class="container" id="timerContainer">
-        <div class="countdown">
-          <div class="time-section">
-            <div class="time-digit next" id="hour-next"></div>
-            <div class="time-digit current" id="hour-current"></div>
-            <div class="time-digit prev" id="hour-prev"></div>
+      <div id="timerContainer" class="countdown">
+
+        <!-- upcoming counter  -->
+        <div class="upcoming">
+          <div class="hour">
+            <span class="hourSpan1" id="upHourspan1"></span>
+            <span class="hourSpan1" id="upHourspan2"></span>
           </div>
-          <span>:</span>
-          <div class="time-section">
-            <div class="time-digit next" id="minute-next"></div>
-            <div class="time-digit current" id="minute-current"></div>
-            <div class="time-digit prev" id="minute-prev"></div>
+          :
+          <div class="minutes">
+            <span class="minutesSpan1" id="upMinutesSpan1"></span>
+            <span class="minutesSpan1" id="upMinutesSpan2"></span>
           </div>
-          <span>:</span>
-          <div class="time-section">
-            <div class="time-digit next" id="second-next"></div>
-            <div class="time-digit current" id="second-current"></div>
-            <div class="time-digit prev" id="second-prev"></div>
+          :
+          <div class="seconds">
+            <span class="secondsSpan1" id="upSecondsSpan1"></span>
+            <span class="secondsSpan1" id="upSecondsSpan2"></span>
+          </div>
+        </div>
+
+        <!-- current counter  -->
+        <div class="current">
+          <div class="hour">
+            <span class="hourSpan1" id="hourspan1"></span>
+            <span class="hourSpan1" id="hourspan2"></span>
+          </div>
+          :
+          <div class="minutes">
+            <span class="minutesSpan1" id="minutesSpan1"></span>
+            <span class="minutesSpan1" id="minutesSpan2"></span>
+          </div>
+          :
+          <div class="seconds">
+            <span class="secondsSpan1" id="secondsSpan1"></span>
+            <span class="secondsSpan1" id="secondsSpan2"></span>
+          </div>
+        </div>
+
+        <!-- Previous counter  -->
+        <div class="previous">
+          <div class="hour">
+            <span class="hourSpan1" id="prevHourspan1"></span>
+            <span class="hourSpan1" id="prevHourspan2"></span>
+          </div>
+          :
+          <div class="minutes">
+            <span class="minutesSpan1" id="prevMinutesSpan1"></span>
+            <span class="minutesSpan1" id="prevMinutesSpan2"></span>
+          </div>
+          :
+          <div class="seconds">
+            <span class="secondsSpan1" id="prevSecondsSpan1"></span>
+            <span class="secondsSpan1" id="prevSecondsSpan2"></span>
           </div>
         </div>
       </div>

@@ -4,77 +4,103 @@ const inputContainer = document.getElementById("inputContainer");
 const resetButton = document.getElementById("resetButton");
 const timerContainer = document.getElementById("timerContainer");
 
-// Initially hide resetButton and timerContainer
+// upcoming items
+const upHourspan1 = document.getElementById("upHourspan1");
+const upHourspan2 = document.getElementById("upHourspan2");
+const upMinutesSpan1 = document.getElementById("upMinutesSpan1");
+const upMinutesSpan2 = document.getElementById("upMinutesSpan2");
+const upSecondsSpan1 = document.getElementById("upSecondsSpan1");
+const upSecondsSpan2 = document.getElementById("upSecondsSpan2");
+
+// current items
+const hourspan1 = document.getElementById("hourspan1");
+const hourspan2 = document.getElementById("hourspan2");
+const minutesSpan1 = document.getElementById("minutesSpan1");
+const minutesSpan2 = document.getElementById("minutesSpan2");
+const secondsSpan1 = document.getElementById("secondsSpan1");
+const secondsSpan2 = document.getElementById("secondsSpan2");
+
+// previous item
+const prevHourspan1 = document.getElementById("prevHourspan1");
+const prevHourspan2 = document.getElementById("prevHourspan2");
+const prevMinutesSpan1 = document.getElementById("prevMinutesSpan1");
+const prevMinutesSpan2 = document.getElementById("prevMinutesSpan2");
+const prevSecondsSpan1 = document.getElementById("prevSecondsSpan1");
+const prevSecondsSpan2 = document.getElementById("prevSecondsSpan2");
+
 resetButton.style.display = "none";
 timerContainer.style.display = "none";
 
 function resetCountdown() {
-  // Show the inputContainer again and hide the resetButton and timerContainer
   inputContainer.style.display = "flex";
   resetButton.style.display = "none";
   timerContainer.style.display = "none";
-  clearInterval(interval); // Stop the countdown
+  clearInterval(interval);
 }
 
 function startCountdown() {
-  // Hide the inputContainer and show the resetButton and timerContainer
   inputContainer.style.display = "none";
   resetButton.style.display = "flex";
   timerContainer.style.display = "flex";
 
-  // Get the input values for hours, minutes, and seconds
-  const hours = parseInt(document.getElementById("hours").value) || 0;
-  const minutes = parseInt(document.getElementById("minutes").value) || 0;
-  const seconds = parseInt(document.getElementById("seconds").value) || 0;
+  let hours = parseInt(document.getElementById("hours").value) || 0;
+  let minutes = parseInt(document.getElementById("minutes").value) || 0;
+  let seconds = parseInt(document.getElementById("seconds").value) || 0;
 
   let totalSeconds = hours * 3600 + minutes * 60 + seconds;
 
   if (interval) {
-    clearInterval(interval); // Clear any existing interval
+    clearInterval(interval);
   }
 
-  // Start the countdown
   interval = setInterval(() => {
     if (totalSeconds <= 0) {
-      clearInterval(interval); // Stop when countdown reaches 0
+      clearInterval(interval);
     } else {
       totalSeconds--;
-      updateCountdown(totalSeconds); // Update the displayed countdown
+      updateCountdown(totalSeconds);
     }
   }, 1000);
 }
 
 function updateCountdown(totalSeconds) {
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = totalSeconds % 60;
+  let hours = Math.floor(totalSeconds / 3600);
+  let minutes = Math.floor((totalSeconds % 3600) / 60);
+  let seconds = totalSeconds % 60;
 
-  animateDigit("hour", Math.floor(hours / 10), Math.floor(hours / 10) - 1);
-  animateDigit("hour", hours % 10, (hours % 10) - 1);
+  // Update hours
+  hourspan1.innerHTML = Math.floor(hours / 10);
+  hourspan2.innerHTML = hours % 10;
 
-  animateDigit("minute", Math.floor(minutes / 10), Math.floor(minutes / 10) - 1);
-  animateDigit("minute", minutes % 10, (minutes % 10) - 1);
+  upHourspan1.innerHTML = Math.min(Math.floor((hours + 1) / 10), 9);
+  upHourspan2.innerHTML = Math.min((hours + 1) % 10, 9);
 
-  animateDigit("second", Math.floor(seconds / 10), Math.floor(seconds / 10) - 1);
-  animateDigit("second", seconds % 10, (seconds % 10) - 1);
-}
+  const prevHour1 = Math.max(Math.floor((hours - 1) / 10), 0);
+  const prevHour2 = Math.max((hours - 1) % 10, 0);
+  prevHourspan1.innerHTML = prevHour1;
+  prevHourspan2.innerHTML = prevHour2;
 
-function animateDigit(elementId, currentValue, previousValue) {
-  const prevDigitElement = document.getElementById(`${elementId}-prev`);
-  const currentDigitElement = document.getElementById(`${elementId}-current`);
-  const nextDigitElement = document.getElementById(`${elementId}-next`);
+  // Update minutes
+  minutesSpan1.innerHTML = Math.floor(minutes / 10);
+  minutesSpan2.innerHTML = minutes % 10;
 
-  prevDigitElement.textContent = previousValue < 0 ? 9 : previousValue;
-  currentDigitElement.textContent = currentValue;
+  upMinutesSpan1.innerHTML = Math.min(Math.floor((minutes + 1) / 10), 9);
+  upMinutesSpan2.innerHTML = Math.min((minutes + 1) % 10, 9);
 
+  const prevMinute1 = Math.max(Math.floor((minutes - 1) / 10), 0);
+  const prevMinute2 = Math.max((minutes - 1) % 10, 0);
+  prevMinutesSpan1.innerHTML = prevMinute1;
+  prevMinutesSpan2.innerHTML = prevMinute2;
 
-  prevDigitElement.classList.remove("prev");
-  currentDigitElement.classList.remove("current");
-  nextDigitElement.classList.remove("next");
+  // Update seconds
+  secondsSpan1.innerHTML = Math.floor(seconds / 10);
+  secondsSpan2.innerHTML = seconds % 10;
 
-  setTimeout(() => {
-    prevDigitElement.classList.add("prev");
-    currentDigitElement.classList.add("current");
-    nextDigitElement.classList.add("next");
-  }, 50);
+  upSecondsSpan1.innerHTML = Math.min(Math.floor((seconds + 1) / 10), 9);
+  upSecondsSpan2.innerHTML = Math.min((seconds + 1) % 10, 9);
+
+  const prevSecond1 = Math.max(Math.floor((seconds - 1) / 10), 0);
+  const prevSecond2 = Math.max((seconds - 1) % 10, 0);
+  prevSecondsSpan1.innerHTML = prevSecond1;
+  prevSecondsSpan2.innerHTML = prevSecond2;
 }
