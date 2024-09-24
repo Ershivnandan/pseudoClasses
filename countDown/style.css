@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 94, 0, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+.inputContainer {
+  text-align: center;
+  display: block;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  color: white;
+  margin-top: 30px;
+  gap: 30px; 
+}
+
+.time-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  width: 80px;
+  /* overflow: hidden;  */
+}
+
+.resetButtonParent{
+    position: absolute;
+    top: 4rem;
+}
+
+.time-digit {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 80px;
+  padding: 10px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.prev {
+  opacity: 0.3;
+  transform: translateY(100%);
+}
+
+.current {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.next {
+  opacity: 0.3;
+  transform: translateY(-100%);
+}

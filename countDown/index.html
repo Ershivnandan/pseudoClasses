@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mainContainer" id="mainContainer">
+      <div class="inputContainer" id="inputContainer">
+        <input type="number" id="hours" placeholder="Hours" min="0" max="24" />
+        <input
+          type="number"
+          id="minutes"
+          placeholder="Minutes"
+          min="0"
+          max="59"
+        />
+        <input
+          type="number"
+          id="seconds"
+          placeholder="Seconds"
+          min="0"
+          max="59"
+        />
+        <button onclick="startCountdown()">Start Timer</button>
+      </div>
+      <div class="resetButtonParent">
+        <button class="resetButton" id="resetButton" onclick="resetCountdown()">
+          Reset
+        </button>
+      </div>
+
+      <div class="container" id="timerContainer">
+        <div class="countdown">
+          <div class="time-section">
+            <div class="time-digit next" id="hour-next"></div>
+            <div class="time-digit current" id="hour-current"></div>
+            <div class="time-digit prev" id="hour-prev"></div>
+          </div>
+          <span>:</span>
+          <div class="time-section">
+            <div class="time-digit next" id="minute-next"></div>
+            <div class="time-digit current" id="minute-current"></div>
+            <div class="time-digit prev" id="minute-prev"></div>
+          </div>
+          <span>:</span>
+          <div class="time-section">
+            <div class="time-digit next" id="second-next"></div>
+            <div class="time-digit current" id="second-current"></div>
+            <div class="time-digit prev" id="second-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
