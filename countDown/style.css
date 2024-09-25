@@ -78,3 +78,38 @@ button {
   position: absolute;
   top: 4rem;
 }
+
+
+ /* Scroll  css Style  */
+
+ @keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+
+.scroll {
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+}
+
+.scroll-up {
+  animation: scrollUp 0.5s forwards;
+}
+
+.scroll-down {
+  animation: scrollDown 0.5s forwards;
+}

@@ -80,6 +80,9 @@ function updateCountdown(totalSeconds) {
   prevHourspan1.innerHTML = prevHour1;
   prevHourspan2.innerHTML = prevHour2;
 
+  updateScrollAnimation(hourspan1, Math.floor(hours / 10), "hourspan1");
+  updateScrollAnimation(hourspan2, hours % 10, "hourspan2");
+
   // Update minutes
   minutesSpan1.innerHTML = Math.floor(minutes / 10);
   minutesSpan2.innerHTML = minutes % 10;
@@ -92,6 +95,9 @@ function updateCountdown(totalSeconds) {
   prevMinutesSpan1.innerHTML = prevMinute1;
   prevMinutesSpan2.innerHTML = prevMinute2;
 
+  updateScrollAnimation(minutesSpan1, Math.floor(minutes / 10), "minutesSpan1");
+  updateScrollAnimation(minutesSpan2, minutes % 10, "minutesSpan2");
+
   // Update seconds
   secondsSpan1.innerHTML = Math.floor(seconds / 10);
   secondsSpan2.innerHTML = seconds % 10;
@@ -103,4 +109,19 @@ function updateCountdown(totalSeconds) {
   const prevSecond2 = Math.max((seconds - 1) % 10, 0);
   prevSecondsSpan1.innerHTML = prevSecond1;
   prevSecondsSpan2.innerHTML = prevSecond2;
+
+  updateScrollAnimation(secondsSpan1, Math.floor(seconds / 10), "secondsSpan1");
+  updateScrollAnimation(secondsSpan2, seconds % 10, "secondsSpan2");
+}
+
+function updateScrollAnimation(span, newValue, containerId) {
+  const container = document.getElementById(containerId);
+
+  span.innerHTML = newValue;
+
+  container.classList.add("scroll-down");
+
+  setTimeout(() => {
+    container.classList.remove("scroll-down");
+  }, 500);
 }
